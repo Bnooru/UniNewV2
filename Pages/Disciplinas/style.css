@@ -1,0 +1,58 @@
+/* ============================================================
+   UniNew — Disciplinas / style.css
+   ============================================================ */
+
+.page-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+.back-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* ── Linha de disciplina ── */
+.disc-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 13px var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  transition: background .15s;
+}
+.disc-row:last-child { border-bottom: none; }
+.disc-row:hover { background: #F8FAFC; }
+
+.disc-row__cod  {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  font-family: var(--font-display);
+  width: 60px;
+  flex-shrink: 0;
+}
+.disc-row__nome {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 0;
+}
+.disc-row__ch {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  width: 44px;
+  flex-shrink: 0;
+  text-align: right;
+}
+.disc-row__actions {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-left: 4px;
+}

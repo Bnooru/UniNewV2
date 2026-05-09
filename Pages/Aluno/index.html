@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Aluno</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__logo" id="header-logo">UniNew</span>
+        <span class="app-header__greeting" id="header-greeting">Olá, Aluno.</span>
+        <span class="app-header__sub" id="header-sub"></span>
+      </div>
+      <button class="btn-logout" id="btn-sair">Sair</button>
+    </header>
+
+    <main class="page-content">
+
+      <!-- Matrícula banner -->
+      <div class="matricula-banner">
+        <div>
+          <div class="matricula-banner__label">Matrícula</div>
+          <div class="matricula-banner__value" id="banner-matricula">—</div>
+        </div>
+        <div class="matricula-banner__right">
+          <div class="matricula-banner__label">Curso</div>
+          <div class="matricula-banner__curso" id="banner-curso">—</div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab-btn is-active" data-tab="visao">Visão Geral</button>
+        <button class="tab-btn" data-tab="notas">Notas</button>
+      </div>
+
+      <!-- TAB: Visão Geral -->
+      <section id="tab-visao">
+        <div class="card">
+          <p class="section-title">Dados Acadêmicos</p>
+          <div class="info-row"><span class="info-row__icon">🎓</span><span id="info-curso">—</span></div>
+          <div class="info-row"><span class="info-row__icon">📅</span><span id="info-semestre">—</span></div>
+          <div class="info-row"><span class="info-row__icon">🆔</span><span id="info-matricula">—</span></div>
+        </div>
+        <div class="card">
+          <p class="section-title">Informações Pessoais</p>
+          <div class="info-row"><span class="info-row__icon">📧</span><span id="info-email">—</span></div>
+          <div class="info-row"><span class="info-row__icon">📱</span><span id="info-tel">—</span></div>
+          <div class="info-row"><span class="info-row__icon">🗓️</span><span id="info-nasc">—</span></div>
+        </div>
+        <a class="btn btn--primary" href="../Cadastro/index.html?mode=edit">✏️ Editar Cadastro</a>
+      </section>
+
+      <!-- TAB: Notas -->
+      <section id="tab-notas" hidden>
+        <div id="notas-loading" class="state-box">
+          <div class="spinner"></div>
+          <span class="state-box__text">Carregando notas…</span>
+        </div>
+        <div id="notas-list" hidden></div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

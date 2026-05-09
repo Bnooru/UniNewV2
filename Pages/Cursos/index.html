@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Cursos</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__logo" id="header-logo">UniNew</span>
+        <span class="app-header__greeting" id="header-greeting">Olá, Administrador.</span>
+      </div>
+      <button class="btn-logout" id="btn-sair">Sair</button>
+    </header>
+
+    <main class="page-content">
+      <div class="page-header-row">
+        <h1 class="page-title" style="margin:0">Cursos</h1>
+        <a class="back-link" href="../Admin/index.html">← Voltar</a>
+      </div>
+
+      <!-- Formulário curso -->
+      <div class="card" id="form-card">
+        <p class="section-title" id="form-title">Alterar / Criar Curso</p>
+        <div class="form-group">
+          <label class="form-label" for="f-nome">Nome do Curso</label>
+          <input class="form-input" id="f-nome" placeholder="Ex: Análise e Desenvolvimento de Sistemas">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-tipo">Tipo</label>
+          <select class="form-select" id="f-tipo">
+            <option>Tecnólogo</option>
+            <option>Bacharelado</option>
+            <option>Licenciatura</option>
+          </select>
+        </div>
+
+        <!-- Disciplinas vinculadas -->
+        <p class="section-title" style="margin-top:14px">Disciplinas do Curso</p>
+        <div class="add-disc-row">
+          <input class="form-input" id="f-disc-search" placeholder="Pesquise por Cód. ou Nome" style="flex:1">
+          <button class="btn btn--primary btn--sm" id="btn-add-disc" style="white-space:nowrap">+ ADD</button>
+        </div>
+        <div class="curso-disc-scroll" id="curso-disc-list">
+          <p class="empty-hint">Nenhuma disciplina adicionada</p>
+        </div>
+
+        <div class="btn-row" style="margin-top:16px">
+          <button class="btn btn--primary"   id="btn-salvar">SALVAR</button>
+          <button class="btn btn--secondary" id="btn-cancelar">CANCELAR</button>
+        </div>
+      </div>
+
+      <!-- Busca cursos -->
+      <div class="search-bar">
+        <span class="search-bar__icon">🔍</span>
+        <input class="search-bar__input" id="search-input" placeholder="Pesquisar curso…">
+      </div>
+
+      <!-- Lista cursos -->
+      <div id="curso-list">
+        <div class="state-box"><div class="spinner"></div></div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

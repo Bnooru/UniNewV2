@@ -1,0 +1,38 @@
+/* ============================================================
+   UniNew — Admin / style.css
+   ============================================================ */
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+.admin-tile {
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 28px var(--space-md) 22px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid transparent;
+  transition: all .22s;
+}
+.admin-tile:hover {
+  border-color: var(--color-primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(79,70,229,.18);
+}
+.admin-tile:active { transform: scale(.97); }
+
+.admin-tile__icon  { font-size: 44px; }
+.admin-tile__label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text);
+}

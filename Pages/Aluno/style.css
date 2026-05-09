@@ -1,0 +1,85 @@
+/* ============================================================
+   UniNew — Aluno / style.css
+   ============================================================ */
+
+/* ── Matrícula Banner ── */
+.matricula-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: #fff;
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-primary);
+}
+.matricula-banner__label {
+  font-size: 10px;
+  opacity: .78;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  margin-bottom: 4px;
+}
+.matricula-banner__value {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+.matricula-banner__right { text-align: right; }
+.matricula-banner__curso {
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* ── Info Rows ── */
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+  font-weight: 500;
+}
+.info-row:last-child { border-bottom: none; }
+.info-row__icon {
+  font-size: 18px;
+  width: 26px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ── Nota Card ── */
+.nota-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: box-shadow .2s;
+}
+.nota-card:hover { box-shadow: var(--shadow-md); }
+
+.nota-card__disc  { font-weight: 600; font-size: 14px; margin-bottom: 3px; }
+.nota-card__cod   { font-size: 12px; color: var(--color-text-muted); }
+
+.nota-badge {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  padding: 8px 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+  text-align: center;
+}
+.nota-badge--ok   { background: var(--color-success-light); color: #15803D; }
+.nota-badge--dep  { background: var(--color-warning-light); color: #B45309; }
+.nota-badge--rep  { background: var(--color-danger-light);  color: var(--color-danger); }

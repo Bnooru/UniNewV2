@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Professor</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__logo" id="header-logo">UniNew</span>
+        <span class="app-header__greeting" id="header-greeting">Olá, Professor.</span>
+        <span class="app-header__sub" id="header-sub">Eng. Software – ADS – Semestre 2 – 2026</span>
+      </div>
+      <button class="btn-logout" id="btn-sair">Sair</button>
+    </header>
+
+    <main class="page-content">
+      <h1 class="page-title">Lançamento de Notas</h1>
+
+      <div class="turma-card">
+        <div class="turma-card__sub" id="turma-sub">Carregando…</div>
+        <div class="turma-card__disc" id="turma-disc">—</div>
+      </div>
+
+      <div class="card card--no-pad">
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Matrícula</th>
+                <th>Aluno</th>
+                <th>P1</th>
+                <th>P2</th>
+                <th>RE</th>
+                <th>Média</th>
+              </tr>
+            </thead>
+            <tbody id="notas-tbody">
+              <tr><td colspan="6" style="text-align:center;padding:20px;color:var(--color-text-muted)">
+                <div class="spinner" style="margin:0 auto"></div>
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn--primary" id="btn-salvar-notas">SALVAR NOTAS</button>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

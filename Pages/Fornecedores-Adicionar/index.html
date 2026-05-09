@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Fornecedor</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__logo" id="header-logo">UniNew</span>
+        <span class="app-header__greeting" id="header-greeting">Olá, Administrador.</span>
+      </div>
+      <button class="btn-logout" id="btn-sair">Sair</button>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+
+      <div class="page-header-row">
+        <h1 class="page-title" id="page-title" style="margin:0">Adicionar Fornecedor</h1>
+        <a class="back-link" href="../Fornecedores/">← Voltar</a>
+      </div>
+
+      <!-- BANNER FEEDBACK -->
+      <div class="feedback-banner" id="feedback-banner" hidden>
+        <span id="feedback-text"></span>
+        <button class="feedback-close" id="feedback-close"></button>
+      </div>
+
+      <div class="card">
+
+        <!-- IDENTIFICAÇÃO -->
+        <p class="section-title">Identificação</p>
+
+        <div class="form-group">
+          <label class="form-label" for="f-razao">Razão Social</label>
+          <input class="form-input" type="text" id="f-razao" placeholder="Nome Oficial">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group" style="flex:2">
+            <label class="form-label" for="f-fantasia">Nome Fantasia</label>
+            <input class="form-input" type="text" id="f-fantasia" placeholder="Nome da Empresa">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-tipo">Tipo</label>
+            <select class="form-select" id="f-tipo">
+              <option value="">—</option>
+              <option>Equipamento</option>
+              <option>Material</option>
+              <option>Tecnologia</option>
+              <option>Serviço</option>
+              <option>Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-cnpj">CNPJ</label>
+          <input class="form-input" type="text" id="f-cnpj"
+                 placeholder="00.000.000/0000-00" maxlength="18">
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- REPRESENTANTE -->
+        <p class="section-title">Representante / Contato</p>
+
+        <div class="form-group">
+          <label class="form-label" for="f-representante">Representante</label>
+          <input class="form-input" type="text" id="f-representante"
+                 placeholder="Nome do Representante">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-telefone">Telefone</label>
+            <input class="form-input" type="tel" id="f-telefone" placeholder="(xx) xxxxx-xxxx">
+          </div>
+          <div class="form-group" style="flex:2">
+            <label class="form-label" for="f-email">E-mail</label>
+            <input class="form-input" type="email" id="f-email" placeholder="email@empresa.com">
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ENDEREÇO -->
+        <p class="section-title">Endereço</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-cep">CEP</label>
+            <input class="form-input" type="text" id="f-cep" placeholder="00000-000" maxlength="9">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-uf">UF</label>
+            <input class="form-input" type="text" id="f-uf" placeholder="SP" maxlength="2">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-logradouro">Logradouro</label>
+          <input class="form-input" type="text" id="f-logradouro"
+                 placeholder="Nome da Rua, Avenida, Rodovia e etc.">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-bairro">Bairro</label>
+            <input class="form-input" type="text" id="f-bairro" placeholder="Bairro">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-cidade">Cidade</label>
+            <input class="form-input" type="text" id="f-cidade" placeholder="Cidade">
+          </div>
+        </div>
+
+      </div><!-- /card -->
+
+      <!-- AÇÕES -->
+      <div class="btn-row">
+        <a class="btn btn--secondary" href="index.html">CANCELAR</a>
+        <button class="btn btn--primary" id="btn-salvar">SALVAR</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

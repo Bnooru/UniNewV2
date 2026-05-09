@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Pessoa</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__logo" id="header-logo">UniNew</span>
+        <span class="app-header__greeting" id="header-greeting">Olá, Administrador.</span>
+      </div>
+      <button class="btn-logout" id="btn-sair">Sair</button>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+
+      <div class="page-header-row">
+        <h1 class="page-title" id="page-title" style="margin:0">Adicionar Pessoa</h1>
+        <a class="back-link" href="../Pessoas/index.html">← Voltar</a>
+      </div>
+
+      <!-- BANNER FEEDBACK -->
+      <div class="feedback-banner" id="feedback-banner" hidden>
+        <span id="feedback-text"></span>
+        <button class="feedback-close" id="feedback-close"></button>
+      </div>
+
+      <div class="card">
+
+        <!-- DADOS PESSOAIS -->
+        <p class="section-title">Dados Pessoais</p>
+
+        <div class="form-group">
+          <label class="form-label" for="p-nome">Nome Completo</label>
+          <input class="form-input" type="text" id="p-nome" placeholder="Nome Completo">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="p-cpf">CPF</label>
+            <input class="form-input" type="text" id="p-cpf" placeholder="000.000.000-00" maxlength="14">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="p-genero">Gênero</label>
+            <select class="form-select" id="p-genero">
+              <option value="">—</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+              <option>Outro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="p-categoria">Categoria</label>
+            <select class="form-select" id="p-categoria">
+              <option value="">—</option>
+              <option>Aluno</option>
+              <option>Professor</option>
+              <option>Funcionário</option>
+            </select>
+          </div>
+          <div class="form-group" style="flex:2">
+            <label class="form-label" for="p-cursodept">Curso / Departamento</label>
+            <input class="form-input" type="text" id="p-cursodept" placeholder="Curso ou Departamento">
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- CONTATO -->
+        <p class="section-title">Contato</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="p-telefone">Telefone</label>
+            <input class="form-input" type="tel" id="p-telefone" placeholder="(xx) xxxxx-xxxx">
+          </div>
+          <div class="form-group" style="flex:2">
+            <label class="form-label" for="p-email">E-mail</label>
+            <input class="form-input" type="email" id="p-email" placeholder="email@exemplo.com">
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ENDEREÇO -->
+        <p class="section-title">Endereço</p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="p-cep">CEP</label>
+            <input class="form-input" type="text" id="p-cep" placeholder="00000-000" maxlength="9">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="p-uf">UF</label>
+            <input class="form-input" type="text" id="p-uf" placeholder="SP" maxlength="2">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="p-logradouro">Logradouro</label>
+          <input class="form-input" type="text" id="p-logradouro"
+                 placeholder="Nome da Rua, Avenida, Rodovia e etc.">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="p-bairro">Bairro</label>
+            <input class="form-input" type="text" id="p-bairro" placeholder="Bairro">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="p-cidade">Cidade</label>
+            <input class="form-input" type="text" id="p-cidade" placeholder="Cidade">
+          </div>
+        </div>
+
+      </div><!-- /card -->
+
+      <!-- AÇÕES -->
+      <div class="btn-row">
+        <a class="btn btn--secondary" href="index.html">CANCELAR</a>
+        <button class="btn btn--primary" id="btn-salvar">SALVAR</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

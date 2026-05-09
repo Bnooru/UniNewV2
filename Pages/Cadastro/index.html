@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Cadastro</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__logo" id="header-logo">UniNew</span>
+        <span class="app-header__greeting" id="header-greeting">Olá.</span>
+      </div>
+      <button class="btn-logout" id="btn-sair">Sair</button>
+    </header>
+
+    <main class="page-content">
+      <h1 class="page-title" id="page-title">Novo Cadastro</h1>
+
+      <!-- Identificação -->
+      <div class="card">
+        <p class="section-title">Identificação</p>
+        <div class="form-group">
+          <label class="form-label" for="f-nome">Nome Completo</label>
+          <input class="form-input" id="f-nome" placeholder="Nome Completo" autocomplete="name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-cpf">CPF</label>
+            <input class="form-input" id="f-cpf" placeholder="000.000.000-00" maxlength="14">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-genero">Gênero</label>
+            <select class="form-select" id="f-genero">
+              <option value="">Selecione</option>
+              <option>Masculino</option>
+              <option>Feminino</option>
+              <option>Outro</option>
+              <option>Prefiro não informar</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contato -->
+      <div class="card">
+        <p class="section-title">Contato</p>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-tel">Telefone</label>
+            <input class="form-input" id="f-tel" placeholder="(xx) xxxxx-xxxx" maxlength="15">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-email">E-mail</label>
+            <input class="form-input" id="f-email" type="email" placeholder="email@ex.com">
+          </div>
+        </div>
+      </div>
+
+      <!-- Endereço -->
+      <div class="card">
+        <p class="section-title">Endereço</p>
+        <div class="form-group">
+          <label class="form-label" for="f-cep">CEP</label>
+          <input class="form-input" id="f-cep" placeholder="XXXXX-XXX" maxlength="9">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-logradouro">Logradouro</label>
+          <input class="form-input" id="f-logradouro" placeholder="Nome da Rua, Avenida, Rodovia…">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-bairro">Bairro</label>
+            <input class="form-input" id="f-bairro" placeholder="Bairro">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-cidade">Cidade</label>
+            <input class="form-input" id="f-cidade" placeholder="Cidade">
+          </div>
+          <div class="form-group" style="max-width:64px">
+            <label class="form-label" for="f-uf">UF</label>
+            <input class="form-input" id="f-uf" placeholder="SP" maxlength="2">
+          </div>
+        </div>
+      </div>
+
+      <!-- Senha (só no cadastro novo) -->
+      <div class="card" id="card-senha">
+        <p class="section-title">Senha</p>
+        <div class="form-group">
+          <label class="form-label" for="f-senha">Senha</label>
+          <input class="form-input" id="f-senha" type="password" placeholder="Inserir sua Senha">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="f-senha2">Repetir Senha</label>
+          <input class="form-input" id="f-senha2" type="password" placeholder="Inserir sua Senha Novamente">
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn--primary" id="btn-salvar">SALVAR</button>
+        <button class="btn btn--secondary" id="btn-cancelar">CANCELAR</button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

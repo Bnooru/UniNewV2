@@ -1,0 +1,79 @@
+/* ============================================================
+   UniNew — Pessoas / adicionar.css
+   ============================================================ */
+
+.page-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.back-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--color-primary-xlight);
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  transition: background .2s, transform .15s;
+  white-space: nowrap;
+}
+.back-link:hover {
+  background: #DDD6FE;
+  transform: translateX(-2px);
+}
+
+/* ── FEEDBACK BANNER ── */
+.feedback-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+  animation: bannerIn .25s ease;
+}
+.feedback-banner.is-success {
+  background: var(--color-success-light);
+  color: #15803D;
+  border: 1px solid #86EFAC;
+}
+.feedback-banner.is-error {
+  background: var(--color-danger-light);
+  color: var(--color-danger);
+  border: 1px solid #FCA5A5;
+}
+.feedback-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: .6;
+  padding: 2px 4px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.feedback-close:hover { opacity: 1; }
+
+@keyframes bannerIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ── CARD ── */
+.card { margin-bottom: var(--space-md); }
+
+/* ── AÇÕES ── */
+.btn-row {
+  display: flex;
+  gap: var(--space-sm);
+}
+.btn-row .btn,
+.btn-row a.btn {
+  flex: 1;
+  text-decoration: none;
+}

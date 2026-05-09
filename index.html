@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Login</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="login-shell" id="app">
+
+    <div class="login-logo">
+      <div class="login-logo__brand">UniNew</div>
+      <div class="login-logo__tagline">Sistema Acadêmico Universitário</div>
+    </div>
+
+    <div class="login-card">
+      <h1 class="login-card__title">Entrar</h1>
+
+      <div class="form-group">
+        <label class="form-label" for="login-email">E-mail</label>
+        <input class="form-input" type="email" id="login-email"
+               placeholder="seu@email.com" autocomplete="email">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="login-senha">Senha</label>
+        <input class="form-input" type="password" id="login-senha"
+               placeholder="••••••••" autocomplete="current-password">
+      </div>
+
+      <div class="login-error" id="login-error" hidden></div>
+
+      <button class="btn btn--primary" id="btn-entrar">
+        <span id="btn-entrar-label">ENTRAR</span>
+        <span class="spinner" id="btn-entrar-spinner" hidden></span>
+      </button>
+    </div>
+
+    <p class="login-footer">
+      Primeira vez por aqui?
+      <a href="../Cadastro/index.html" class="login-footer__link">Clique aqui</a>
+    </p>
+
+  </main>
+
+  <!-- Credenciais demo -->
+  <div class="demo-hints" id="demo-hints">
+    <p class="demo-hints__title">🔐 Credenciais Demo</p>
+    <button class="demo-btn" data-email="admin@uninew.com"     data-senha="admin123">👤 Admin</button>
+    <button class="demo-btn" data-email="aluno@uninew.com"     data-senha="aluno123">🎓 Aluno</button>
+    <button class="demo-btn" data-email="professor@uninew.com" data-senha="prof123" >📋 Professor</button>
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

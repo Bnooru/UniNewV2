@@ -1,0 +1,41 @@
+/* ============================================================
+   UniNew — Cursos / style.css
+   ============================================================ */
+
+.page-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+.back-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; }
+
+/* ── Adicionar disciplina ao curso ── */
+.add-disc-row {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  margin-bottom: var(--space-sm);
+}
+
+/* ── Scroll de disciplinas vinculadas ── */
+.curso-disc-scroll {
+  max-height: 160px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  background: #FAFBFF;
+}
+.empty-hint {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  padding: 10px 0;
+  text-align: center;
+}

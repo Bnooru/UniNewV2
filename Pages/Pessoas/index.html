@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Pessoas</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__logo" id="header-logo">UniNew</span>
+        <span class="app-header__greeting" id="header-greeting">Olá, Administrador.</span>
+      </div>
+      <button class="btn-logout" id="btn-sair">Sair</button>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="page-content">
+
+      <div class="page-header-row">
+        <h1 class="page-title" style="margin:0">Pessoas</h1>
+        <a class="back-link" href="../Admin/index.html">← Voltar</a>
+      </div>
+
+      <!-- BANNER FEEDBACK (substitui toast) -->
+      <div class="feedback-banner" id="feedback-banner" hidden>
+        <span id="feedback-text"></span>
+        <button class="feedback-close" id="feedback-close"></button>
+      </div>
+
+      <!-- SEARCH -->
+      <div class="search-bar">
+        <span class="search-bar__icon">🔍</span>
+        <input class="search-bar__input" type="search" id="search-input"
+               placeholder="Pesquisar por nome, e-mail ou categoria…">
+      </div>
+
+      <!-- LISTA -->
+      <div id="pessoas-list">
+        <div class="state-box">
+          <div class="spinner"></div>
+          <p class="state-box__title">Carregando…</p>
+        </div>
+      </div>
+
+      <!-- BOTÃO ADICIONAR -->
+      <a class="btn btn--primary add-btn" href="../Pessoas-Adicionar/index.html">
+        + ADICIONAR NOVA PESSOA
+      </a>
+
+    </main>
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

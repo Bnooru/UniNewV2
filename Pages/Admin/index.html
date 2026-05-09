@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>UniNew — Administrador</title>
+  <link rel="stylesheet" href="../../Styles/global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="app-header">
+      <div class="app-header__brand">
+        <span class="app-header__logo" id="header-logo">UniNew</span>
+        <span class="app-header__greeting" id="header-greeting">Olá, Administrador.</span>
+      </div>
+      <button class="btn-logout" id="btn-sair">Sair</button>
+    </header>
+
+    <main class="page-content">
+      <h1 class="page-title">Início</h1>
+
+      <nav class="admin-grid">
+        <a class="admin-tile" href="../Pessoas/index.html">
+          <span class="admin-tile__icon">👥</span>
+          <span class="admin-tile__label">Pessoas</span>
+        </a>
+        <a class="admin-tile" href="../Fornecedores/index.html">
+          <span class="admin-tile__icon">🏢</span>
+          <span class="admin-tile__label">Fornecedores</span>
+        </a>
+        <a class="admin-tile" href="../Disciplinas/index.html">
+          <span class="admin-tile__icon">📚</span>
+          <span class="admin-tile__label">Disciplinas</span>
+        </a>
+        <a class="admin-tile" href="../Cursos/index.html">
+          <span class="admin-tile__icon">🎓</span>
+          <span class="admin-tile__label">Cursos</span>
+        </a>
+      </nav>
+    </main>
+
+  </div>
+
+  <script src="../../Js/global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
