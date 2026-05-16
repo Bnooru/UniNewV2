@@ -1,6 +1,3 @@
-/* ============================================================
-   UniNew — Login / style.css
-   ============================================================ */
 
 .login-shell {
   min-height: 100vh;
@@ -17,7 +14,6 @@
   overflow: hidden;
 }
 
-/* bolhas decorativas */
 .login-shell::before,
 .login-shell::after {
   content: '';
