@@ -1,15 +1,10 @@
-/* ============================================================
-   UniNew — GLOBAL JS
-   APIService · Auth · Helpers · Toast · Router
-   ============================================================ */
+
 
 'use strict';
 
-/* ─────────────────────────────────────────
-   CONFIGURAÇÃO DE AMBIENTE
+/*  CONFIGURAÇÃO DE AMBIENTE
    IS_DEMO = true  → usa mock data (offline)
-   IS_DEMO = false → usa fetch() contra API real
-───────────────────────────────────────── */
+   IS_DEMO = false → usa fetch() contra API real */
 const IS_DEMO = true;
 
 /* Base URL da API real (só usada quando IS_DEMO = false) */
@@ -18,9 +13,9 @@ const API_BASE_URL = 'https://api.uninew.com.br/v1';
 /* Delay simulado em modo demo (ms) */
 const DEMO_DELAY = 350;
 
-/* ─────────────────────────────────────────
-   MOCK DATA (dados estáticos para modo demo)
-───────────────────────────────────────── */
+/*
+   MOCK DATA 
+*/
 const MOCK_DB = {
   usuarios: [
     { id: 1, email: 'admin@uninew.com',     senha: 'admin123',  perfil: 'admin',     nome: 'Administrador' },
@@ -73,16 +68,16 @@ const MOCK_DB = {
   ],
 };
 
-/* ─────────────────────────────────────────
+/* 
    HELPER — simula delay de rede em demo
-───────────────────────────────────────── */
+ */
 function _demoDelay(data) {
   return new Promise(resolve => setTimeout(() => resolve(structuredClone(data)), DEMO_DELAY));
 }
 
-/* ─────────────────────────────────────────
+/* 
    HELPER — fetch wrapper para API real
-───────────────────────────────────────── */
+ */
 async function _apiFetch(endpoint, options = {}) {
   const token = Auth.getToken();
   const res = await fetch(`${API_BASE_URL}${endpoint}`, {
@@ -101,9 +96,9 @@ async function _apiFetch(endpoint, options = {}) {
   return res.json();
 }
 
-/* ─────────────────────────────────────────
+/*
    AUTH SERVICE
-───────────────────────────────────────── */
+*/
 const Auth = {
   _key: 'uninew_session',
 
@@ -149,12 +144,12 @@ const Auth = {
   },
 };
 
-/* ─────────────────────────────────────────
+/*
    API SERVICE
    Cada método:
      DEMO → resolve com mock data
      REAL → fetch() contra endpoint real
-───────────────────────────────────────── */
+*/
 const APIService = {
 
   /* ── AUTH ── */
@@ -335,9 +330,9 @@ const APIService = {
   },
 };
 
-/* ─────────────────────────────────────────
+/* 
    HELPERS GLOBAIS
-───────────────────────────────────────── */
+*/
 
 /** Inicializa header em páginas internas */
 function initHeader(session) {
@@ -376,9 +371,9 @@ function debounce(fn, delay = 300) {
   return (...args) => { clearTimeout(timer); timer = setTimeout(() => fn(...args), delay); };
 }
 
-/* ─────────────────────────────────────────
+/* 
    TOAST SYSTEM
-───────────────────────────────────────── */
+*/
 const Toast = {
   _container: null,
 
