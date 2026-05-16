@@ -10,7 +10,7 @@
 
 ---
 
-Este é um **projeto integrador** desenvolvido para o curso de **Análise e Desenvolvimento de Sistemas (ADS)**, realizado pelos integrantes do **Grupo 10**.  
+Este é um **projeto integrador** desenvolvido para o curso de **Análise e Desenvolvimento de Sistemas (ADS)**, realizado pelos integrantes do **Grupo 14**.  
 O sistema **UniNew** tem como objetivo centralizar e simplificar o gerenciamento de informações acadêmicas de **alunos, docentes, funcionários e fornecedores**, proporcionando uma interface simples e funcional.
 
 ---
