@@ -50,11 +50,13 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 
 ## ⚙️ Funcionamento
 - O usuario ao  logar com login e senha será verificado se as credenciais estão corretas.
-- Caso afirmativo, a página é redirecionada para o dashboard do respectivo tipo de usuário (Aluno, Docente, Administrativo ou Gerente).
+- Caso afirmativo, a página é redirecionada para o dashboard do respectivo tipo de usuário (Aluno, Professor, Administrativo).
 - Aluno -> pagina do aluno contendo informações sobre notas, curso e etc, professor -> págida do professor para administrar a sua diciplina, administrador -> dashboard administrador para controlar o pessoal e materias e cursos.
 - Para criar novos alunos ou docentes, o usuário deve clicar em “Primeira vez aqui?” na tela de login e preencher o cadastro.
 
-> ⚠️ Como esta é uma **versão beta**, alguns usuários já foram **pré-cadastrados** no sistema, e **funcionários/gerentes/alunos**.
+ ⚠️**OBS.: A navegação dessa versão é feita no modo DEMO que inclui no rodapé a opção para ser selecionada para fazer o login entre:**   
+ - **Administrador/Professor/Aluno**
+>  Como esta é uma **versão beta**, alguns usuários já foram **pré-cadastrados** no sistema, e **Administrador/Professor/Aluno**.
 
 ---
 ## 🗂 Estrutura do Projeto
