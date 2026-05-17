@@ -32,22 +32,15 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 - **Wilgner Feliciano Rizzi**  
 
 ---
-
-## 🧠 Pontos de Avaliação
-
-
-- **Frontend**: HTML, CSS e JavaScript (sem frameworks)
-- **Backend**: 
-- **Controle de versão**: Git e GitHub
-
-
----
-
 ## 🎥 Vídeo Explicativo
 
 
 ---
-
+---
+## Links
+🔗 [**Projeto no Figma**](https://www.figma.com/design/9wQ8dqRtfNZRNSui0EssQx/UninewV2) 
+>(OBS.: projeto foi desenvolvido no PenPot e exportado para o Figma)
+---
 ## ⚙️ Funcionamento
 - O usuario ao  logar com login e senha será verificado se as credenciais estão corretas.
 - Caso afirmativo, a página é redirecionada para o dashboard do respectivo tipo de usuário (Aluno, Professor, Administrativo).
