@@ -58,8 +58,8 @@ tabBtns.forEach(btn => {
 
 /* ── Notas ── */
 async function carregarNotas() {
-  notasLoad.hidden  = false;
-  notasList.hidden  = true;
+  notasLoad.style.display = '';
+  notasList.style.display = 'none';
 
   try {
     const notas = await APIService.getNotasAluno(session.id);
@@ -67,13 +67,11 @@ async function carregarNotas() {
     notasCarregadas = true;
   } catch (err) {
     notasLoad.innerHTML = `
-      <div class="state-box">
-        <span class="state-box__icon">❌</span>
-        <p class="state-box__text">${err.message}</p>
-      </div>`;
+      <span class="state-box__icon">❌</span>
+      <p class="state-box__text">${err.message}</p>`;
   } finally {
-    notasLoad.hidden = true;
-    notasList.hidden = false;
+    notasLoad.style.display = 'none';
+    notasList.style.display = '';
   }
 }
 

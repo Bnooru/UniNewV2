@@ -10,10 +10,10 @@
    IS_DEMO = true  → usa mock data (offline)
    IS_DEMO = false → usa fetch() contra API real
 ───────────────────────────────────────── */
-const IS_DEMO = true;
+const IS_DEMO = false;
 
 /* Base URL da API real (só usada quando IS_DEMO = false) */
-const API_BASE_URL = 'https://api.uninew.com.br/v1';
+const API_BASE_URL = '/api';
 
 /* Delay simulado em modo demo (ms) */
 const DEMO_DELAY = 350;
@@ -86,6 +86,7 @@ function _demoDelay(data) {
 async function _apiFetch(endpoint, options = {}) {
   const token = Auth.getToken();
   const res = await fetch(`${API_BASE_URL}${endpoint}`, {
+    cache: 'no-store',
     headers: {
       'Content-Type': 'application/json',
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
@@ -245,6 +246,16 @@ const APIService = {
     return _apiFetch(`/cursos/${id}`, { method: 'DELETE' });
   },
 
+  async addAlunoAoCurso(cursoId, alunoId) {
+    if (IS_DEMO) return _demoDelay({ success: true });
+    return _apiFetch(`/cursos/${cursoId}/alunos`, { method: 'POST', body: { alunoId } });
+  },
+
+  async removeAlunoDocurso(cursoId, alunoId) {
+    if (IS_DEMO) return _demoDelay({ success: true });
+    return _apiFetch(`/cursos/${cursoId}/alunos/${alunoId}`, { method: 'DELETE' });
+  },
+
   /* ── PESSOAS ── */
   async getPessoas() {
     if (IS_DEMO) return _demoDelay(MOCK_DB.pessoas);
@@ -312,6 +323,11 @@ const APIService = {
   },
 
   /* ── NOTAS (professor) ── */
+  async getProfessorDisciplinas() {
+    if (IS_DEMO) return _demoDelay([]);
+    return _apiFetch('/notas/professor');
+  },
+
   async getAlunosTurma(disciplinaId) {
     if (IS_DEMO) return _demoDelay(MOCK_DB.alunosNotas);
     return _apiFetch(`/notas/turma/${disciplinaId}`);

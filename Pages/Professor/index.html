@@ -22,12 +22,14 @@
     <main class="page-content">
       <h1 class="page-title">Lançamento de Notas</h1>
 
-      <div class="turma-card">
-        <div class="turma-card__sub" id="turma-sub">Carregando…</div>
-        <div class="turma-card__disc" id="turma-disc">—</div>
+      <div class="card" id="disc-selector-card" style="margin-bottom:var(--space-md)">
+        <label class="form-label" for="sel-disciplina">Disciplina</label>
+        <select class="form-select" id="sel-disciplina">
+          <option value="">Carregando…</option>
+        </select>
       </div>
 
-      <div class="card card--no-pad">
+      <div class="card card--no-pad" id="notas-card" style="display:none">
         <div class="table-wrapper">
           <table class="data-table">
             <thead>
@@ -49,7 +51,7 @@
         </div>
       </div>
 
-      <div class="btn-row">
+      <div class="btn-row" id="btn-row-notas" style="display:none">
         <button class="btn btn--primary" id="btn-salvar-notas">SALVAR NOTAS</button>
       </div>
     </main>

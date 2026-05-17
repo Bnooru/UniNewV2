@@ -50,28 +50,36 @@ bannerClose.addEventListener('click', () => {
 });
 
 /* ── Carrega dados para edição ── */
+function selectOption(selectEl, value) {
+  const opt = selectEl.querySelector(`option[value="${value}"]`);
+  if (opt) opt.selected = true;
+}
+
 async function loadForEdit() {
   if (!editId) return;
   pageTitle.textContent = 'Editar Pessoa';
   btnSalvar.textContent = 'SALVAR ALTERAÇÃO';
+  btnSalvar.disabled = true;
   try {
     const pessoas = await APIService.getPessoas();
     const p = pessoas.find(x => x.id === editId);
     if (!p) { showBanner('Pessoa não encontrada.'); return; }
     fNome.value       = p.nome       || '';
     fCpf.value        = p.cpf        || '';
-    fGenero.value     = p.genero     || '';
-    fCategoria.value  = p.categoria  || '';
-    fCursoDept.value  = p.cursoDept  || '';
     fTelefone.value   = p.telefone   || '';
     fEmail.value      = p.email      || '';
+    fCursoDept.value  = p.cursoDept  || '';
     fCep.value        = p.cep        || '';
     fUf.value         = p.uf         || '';
     fLogradouro.value = p.logradouro || '';
     fBairro.value     = p.bairro     || '';
     fCidade.value     = p.cidade     || '';
+    selectOption(fGenero,    p.genero    || '');
+    selectOption(fCategoria, p.categoria || '');
   } catch (err) {
     showBanner('Erro ao carregar dados: ' + err.message);
+  } finally {
+    btnSalvar.disabled = false;
   }
 }
 
@@ -94,6 +102,9 @@ btnSalvar.addEventListener('click', async () => {
 
   if (!dados.nome)      { showBanner('⚠️ Nome é obrigatório.'); fNome.focus(); return; }
   if (!dados.categoria) { showBanner('⚠️ Selecione uma categoria.'); fCategoria.focus(); return; }
+  if (dados.cpf.replace(/\D/g, '').length !== 11) {
+    showBanner('⚠️ CPF obrigatório. Use o formato 000.000.000-00.'); fCpf.focus(); return;
+  }
 
   btnSalvar.disabled = true;
   btnSalvar.textContent = 'Salvando…';
@@ -103,7 +114,7 @@ btnSalvar.addEventListener('click', async () => {
     } else {
       await APIService.createPessoa(dados);
     }
-    window.location.href = 'index.html?saved=1';
+    window.location.href = '../Pessoas/index.html?saved=1';
   } catch (err) {
     showBanner('❌ ' + err.message);
     btnSalvar.disabled = false;

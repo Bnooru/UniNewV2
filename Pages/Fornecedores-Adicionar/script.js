@@ -103,7 +103,7 @@ btnSalvar.addEventListener('click', async () => {
     } else {
       await APIService.createFornecedor(dados);
     }
-    window.location.href = 'index.html?saved=1';
+    window.location.href = '../Fornecedores/index.html?saved=1';
   } catch (err) {
     showBanner('❌ ' + err.message);
     btnSalvar.disabled = false;

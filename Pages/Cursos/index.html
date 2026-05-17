@@ -43,12 +43,25 @@
         <!-- Disciplinas vinculadas -->
         <p class="section-title" style="margin-top:14px">Disciplinas do Curso</p>
         <div class="add-disc-row">
-          <input class="form-input" id="f-disc-search" placeholder="Pesquise por Cód. ou Nome" style="flex:1">
+          <select class="form-select" id="f-disc-select" style="flex:1">
+            <option value="">— Selecione uma disciplina —</option>
+          </select>
           <button class="btn btn--primary btn--sm" id="btn-add-disc" style="white-space:nowrap">+ ADD</button>
         </div>
         <div class="curso-disc-scroll" id="curso-disc-list">
           <p class="empty-hint">Nenhuma disciplina adicionada</p>
         </div>
+
+        <!-- Alunos vinculados -->
+        <p class="section-title" style="margin-top:14px">Alunos do Curso</p>
+        <p id="aluno-hint" class="empty-hint" style="margin-bottom:8px">Salve o curso primeiro para adicionar alunos.</p>
+        <div class="add-disc-row" id="aluno-add-row" style="display:none">
+          <select class="form-select" id="f-aluno-select" style="flex:1">
+            <option value="">— Selecione um aluno —</option>
+          </select>
+          <button class="btn btn--primary btn--sm" id="btn-add-aluno" style="white-space:nowrap">+ ADD</button>
+        </div>
+        <div class="curso-disc-scroll" id="curso-aluno-list"></div>
 
         <div class="btn-row" style="margin-top:16px">
           <button class="btn btn--primary"   id="btn-salvar">SALVAR</button>

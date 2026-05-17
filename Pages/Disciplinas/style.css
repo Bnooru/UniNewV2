@@ -20,39 +20,64 @@
 .disc-row {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
-  padding: 13px var(--space-md);
+  gap: 12px;
+  padding: 12px var(--space-md);
   border-bottom: 1px solid var(--color-border);
   transition: background .15s;
 }
 .disc-row:last-child { border-bottom: none; }
 .disc-row:hover { background: #F8FAFC; }
 
-.disc-row__cod  {
-  font-size: 11px;
+.disc-row__cod {
+  font-size: 10px;
   font-weight: 700;
   color: var(--color-text-muted);
   font-family: var(--font-display);
-  width: 60px;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  padding: 3px 7px;
   flex-shrink: 0;
+  width: 64px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.disc-row__info {
+  flex: 1;
+  min-width: 0;
 }
 .disc-row__nome {
-  flex: 1;
   font-size: 14px;
   font-weight: 500;
-  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.disc-row__prof {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.disc-row__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
 }
 .disc-row__ch {
   font-size: 12px;
   font-weight: 600;
   color: var(--color-text-muted);
-  width: 44px;
-  flex-shrink: 0;
-  text-align: right;
+  white-space: nowrap;
 }
 .disc-row__actions {
   display: flex;
   gap: 4px;
-  flex-shrink: 0;
-  margin-left: 4px;
 }

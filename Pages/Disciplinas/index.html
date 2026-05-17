@@ -31,9 +31,17 @@
           <label class="form-label" for="f-nome">Nome da Disciplina</label>
           <input class="form-input" id="f-nome" placeholder="Ex: Desenvolvimento Mobile II">
         </div>
-        <div class="form-group">
-          <label class="form-label" for="f-ch">Carga Horária (h)</label>
-          <input class="form-input" id="f-ch" type="number" min="1" max="400" placeholder="60">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-ch">Carga Horária (h)</label>
+            <input class="form-input" id="f-ch" type="number" min="1" max="400" placeholder="60">
+          </div>
+          <div class="form-group" style="flex:2">
+            <label class="form-label" for="f-professor">Professor <span style="font-weight:400;color:var(--color-text-muted)">(opcional)</span></label>
+            <select class="form-select" id="f-professor">
+              <option value="">— Nenhum —</option>
+            </select>
+          </div>
         </div>
         <div class="btn-row">
           <button class="btn btn--primary"   id="btn-salvar">SALVAR</button>
