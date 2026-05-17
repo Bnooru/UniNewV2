@@ -54,6 +54,8 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 - Aluno -> pagina do aluno contendo informações sobre notas, curso e etc, professor -> págida do professor para administrar a sua diciplina, administrador -> dashboard administrador para controlar o pessoal e materias e cursos.
 - Para criar novos alunos ou docentes, o usuário deve clicar em “Primeira vez aqui?” na tela de login e preencher o cadastro.
 
+> ⚠️ Como esta é uma **versão beta**, alguns usuários já foram **pré-cadastrados** no sistema, e **funcionários/gerentes/alunos**.
+
 ---
 ## 🗂 Estrutura do Projeto
 ````
