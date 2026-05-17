@@ -32,7 +32,7 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 - **Wilgner Feliciano Rizzi**  
 
 ---
-## 🎥 Vídeo Explicativo
+## 🎥 Vídeo Demonstração
 🔗 [**UniNew v2**](https://youtu.be/H-tZQRHA8tY)
 
 ---
