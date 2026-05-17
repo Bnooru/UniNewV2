@@ -36,6 +36,10 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 ## 🧠 Pontos de Avaliação
 
 
+Frontend: HTML, CSS e JavaScript (sem frameworks)
+Backend: 
+Controle de versão: Git e GitHub
+
 
 ---
 
@@ -45,17 +49,79 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 ---
 
 ## ⚙️ Funcionamento
-
-
+O usuario ao  logar com login e senha será verificado se as credenciais estão corretas.
+Caso afirmativo, a página é redirecionada para o dashboard do respectivo tipo de usuário (Aluno, Docente, Administrativo ou Gerente).
+Aluno -> pagina do aluno contendo informações sobre notas, curso e etc, professor -> págida do professor para administrar a sua diciplina, administrador -> dashboard administrador para controlar o pessoal e materias e cursos.
+Para criar novos alunos ou docentes, o usuário deve clicar em “Primeira vez aqui?” na tela de login e preencher o cadastro.
 
 ---
 ## 🗂 Estrutura do Projeto
-
-
-
-### 🔑 Logins pré-carregados:
-
-
+UniNewV2
+├── Assets
+│   └── Logo.png
+├── Js
+│   └── global.js
+├── Pages
+│   ├── Admin
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── Aluno
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── Cadastro
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── Cursos
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── Disciplinas
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── Fornecedores-Adicionar
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── Fornecedores
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── Pessoas-Adicionar
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── Pessoas
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   └── Professor
+│       ├── index.html
+│       ├── script.js
+│       └── style.css
+└── Styles
+│   └── global.css
+├── backend
+│   ├── src
+│   │   ├── middleware
+│   │   │   └── auth.js
+│   │   ├── routes
+│   │   │   ├── auth.js
+│   │   │   ├── cursos.js
+│   │   │   ├── disciplinas.js
+│   │   │   ├── fornecedores.js
+│   │   │   ├── notas.js
+│   │   │   └── pessoas.js
+│   │   ├── db.js
+│   │   └── index.js
+│   ├── Dockerfile
+│   └── package.json
+├── db
+│   ├── 01_schema.sql
+│   └── 02_seed.sql
 ---
 
 📘 **UniNew - Projeto Integrador ADS**  
