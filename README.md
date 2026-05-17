@@ -56,6 +56,7 @@ Para criar novos alunos ou docentes, o usuário deve clicar em “Primeira vez a
 
 ---
 ## 🗂 Estrutura do Projeto
+````
 UniNewV2
 ├── Assets
 │   └── Logo.png
@@ -122,6 +123,7 @@ UniNewV2
 ├── db
 │   ├── 01_schema.sql
 │   └── 02_seed.sql
+`````
 ---
 
 📘 **UniNew - Projeto Integrador ADS**  
