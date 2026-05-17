@@ -1,6 +1,3 @@
-/* ============================================================
-   UniNew — Login / style.css
-   ============================================================ */
 
 .login-shell {
   min-height: 100vh;
@@ -17,7 +14,6 @@
   overflow: hidden;
 }
 
-/* bolhas decorativas */
 .login-shell::before,
 .login-shell::after {
   content: '';
@@ -38,12 +34,23 @@
 
 /* ── Logo ── */
 .login-logo {
-  text-align: center;
   color: #fff;
   position: relative;
   z-index: 1;
   animation: fadeDown .5s ease both;
+  display: inline-block;
+  align-self: center;
+  padding-right: 80px;  
 }
+
+
+.login-logo__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
 .login-logo__brand {
   font-family: var(--font-display);
   font-size: 64px;
@@ -59,6 +66,72 @@
   letter-spacing: .2px;
 }
 
+
+.logo-image {
+  --circle-size: 60%;
+  position: absolute;
+  bottom: -50px;   
+  right: -50px;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(100px, 25vw, 140px);
+  line-height: 0;
+}
+
+.logo-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 30;
+  pointer-events: none;
+}
+
+#circle-dark,
+#circle-light {
+  position: absolute;
+  width: var(--circle-size);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  z-index: 10;
+  transform: translateZ(0);
+  box-shadow: 0 6px 18px rgba(2,6,23,0.25);
+}
+
+#circle-dark {
+  background: var(--color-circle-dark);
+  opacity: 70%;
+  left: 3%;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 12;
+}
+
+#circle-light {
+  background: var(--color-circle-light);
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.logo-image::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--circle-size) * 0.62);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: var(--overlap-color);
+  z-index: 11;
+  right: 1%;
+  top: 42%;
+  transform: translateY(-50%);
+  filter: blur(0px);
+  opacity: 1;
+  pointer-events: none;
+}
+
 /* ── Card ── */
 .login-card {
   background: #fff;
@@ -67,6 +140,7 @@
   width: 100%;
   box-shadow: 0 24px 60px rgba(0,0,0,.28);
   position: relative;
+  margin-top: 10%;
   z-index: 1;
   animation: fadeUp .5s .1s ease both;
 }
