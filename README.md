@@ -1,7 +1,7 @@
 # UniNewV2
 # 🌐 UniNew  
 
-![Status](https://img.shields.io/badge/em_andamento-90%25-orange)
+![Status](https://img.shields.io/badge/em_andamento-100%25-green)
 ![ADS](https://img.shields.io/badge/Projeto%20Integrador-ADS-blue)
 ![FeitoCom](https://img.shields.io/badge/Feito%20com-❤️-red)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-yellow)
@@ -33,15 +33,15 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 
 ---
 ## 🎥 Vídeo Explicativo
-🔗 [**UniNew_V2**](link do video aqui)
+🔗 [**UniNew v2**](https://youtu.be/H-tZQRHA8tY)
 
 ---
 ---
 ## Links
+🔗 [**Projeto no GitHub**](https://github.com/Bnooru/UniNewV2)
+
 🔗 [**Projeto no Figma**](https://www.figma.com/design/9wQ8dqRtfNZRNSui0EssQx/UninewV2) 
 >(OBS.: projeto foi desenvolvido no PenPot e exportado para o Figma)
-
-🔗 [**Projeto no GitHub**](https://github.com/Bnooru/UniNewV2)
 
 ---
 ## ⚙️ Funcionamento
