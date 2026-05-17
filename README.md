@@ -1,7 +1,7 @@
 # UniNewV2
 # 🌐 UniNew  
 
-![Status](https://img.shields.io/badge/em_andamento-50%25-orange)
+![Status](https://img.shields.io/badge/em_andamento-90%25-orange)
 ![ADS](https://img.shields.io/badge/Projeto%20Integrador-ADS-blue)
 ![FeitoCom](https://img.shields.io/badge/Feito%20com-❤️-red)
 ![Frontend](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JS-yellow)
