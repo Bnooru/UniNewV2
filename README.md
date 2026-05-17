@@ -33,13 +33,16 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 
 ---
 ## 🎥 Vídeo Explicativo
-
+🔗 [**UniNew_V2**](link do video aqui)
 
 ---
 ---
 ## Links
 🔗 [**Projeto no Figma**](https://www.figma.com/design/9wQ8dqRtfNZRNSui0EssQx/UninewV2) 
 >(OBS.: projeto foi desenvolvido no PenPot e exportado para o Figma)
+
+🔗 [**Projeto no GitHub**](https://github.com/Bnooru/UniNewV2)
+
 ---
 ## ⚙️ Funcionamento
 - O usuario ao  logar com login e senha será verificado se as credenciais estão corretas.
