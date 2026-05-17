@@ -36,9 +36,9 @@ Durante o desenvolvimento, o foco foi em manter a **usabilidade e clareza da nav
 ## 🧠 Pontos de Avaliação
 
 
-Frontend: HTML, CSS e JavaScript (sem frameworks)
-Backend: 
-Controle de versão: Git e GitHub
+- **Frontend**: HTML, CSS e JavaScript (sem frameworks)
+- **Backend**: 
+- **Controle de versão**: Git e GitHub
 
 
 ---
@@ -49,10 +49,10 @@ Controle de versão: Git e GitHub
 ---
 
 ## ⚙️ Funcionamento
-O usuario ao  logar com login e senha será verificado se as credenciais estão corretas.
-Caso afirmativo, a página é redirecionada para o dashboard do respectivo tipo de usuário (Aluno, Docente, Administrativo ou Gerente).
-Aluno -> pagina do aluno contendo informações sobre notas, curso e etc, professor -> págida do professor para administrar a sua diciplina, administrador -> dashboard administrador para controlar o pessoal e materias e cursos.
-Para criar novos alunos ou docentes, o usuário deve clicar em “Primeira vez aqui?” na tela de login e preencher o cadastro.
+- O usuario ao  logar com login e senha será verificado se as credenciais estão corretas.
+- Caso afirmativo, a página é redirecionada para o dashboard do respectivo tipo de usuário (Aluno, Docente, Administrativo ou Gerente).
+- Aluno -> pagina do aluno contendo informações sobre notas, curso e etc, professor -> págida do professor para administrar a sua diciplina, administrador -> dashboard administrador para controlar o pessoal e materias e cursos.
+- Para criar novos alunos ou docentes, o usuário deve clicar em “Primeira vez aqui?” na tela de login e preencher o cadastro.
 
 ---
 ## 🗂 Estrutura do Projeto
